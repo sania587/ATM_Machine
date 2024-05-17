@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ATM_Controller">
+    <children>
+        <Label layoutY="14.0" prefHeight="65.0" prefWidth="400.0" text="    ATM Machine" style="-fx-background-color: skyblue;" textFill="#f5f5f5" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+            <font>
+                <Font name="System Bold" size="45.0" />
+            </font>
+        </Label>
+        <VBox layoutY="90.0" spacing="10" alignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <Label layoutX="20.0" text="Enter UserId: " />
+                <TextField fx:id="userIdField" promptText="Enter User ID" />
+                <Label layoutX="20.0" text="Enter Amount: " />
+                <TextField fx:id="amountField" editable="false" promptText="Enter amount" />
+                <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="33" />
+                        <ColumnConstraints percentWidth="33" />
+                        <ColumnConstraints percentWidth="33" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints percentHeight="25" />
+                        <RowConstraints percentHeight="25" />
+                        <RowConstraints percentHeight="25" />
+                        <RowConstraints percentHeight="25" />
+                    </rowConstraints>
+                    <children>
+                    <Button fx:id="numberButton1" onAction="#handleNumber" prefHeight="25.0" prefWidth="129.0" text="1" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+<Button fx:id="numberButton2" onAction="#handleNumber" prefHeight="25.0" prefWidth="130.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+<Button fx:id="numberButton3" onAction="#handleNumber" prefHeight="25.0" prefWidth="133.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+<Button fx:id="numberButton4" onAction="#handleNumber" prefHeight="25.0" prefWidth="129.0" text="4" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+<Button fx:id="numberButton5" onAction="#handleNumber" prefHeight="25.0" prefWidth="130.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+<Button fx:id="numberButton6" onAction="#handleNumber" prefHeight="25.0" prefWidth="132.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+<Button fx:id="numberButton7" onAction="#handleNumber" prefHeight="25.0" prefWidth="129.0" text="7" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+<Button fx:id="numberButton8" onAction="#handleNumber" prefHeight="25.0" prefWidth="129.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+<Button fx:id="numberButton9" onAction="#handleNumber" prefHeight="25.0" prefWidth="132.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+<Button fx:id="numberButton0" onAction="#handleNumber" prefHeight="25.0" prefWidth="128.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    
+                          </children>
+                </GridPane>
+                <HBox alignment="CENTER" spacing="10">
+                
+                    <Button fx:id="withdrawButton" onAction="#handleWithdraw" prefHeight="25.0" prefWidth="120.0" text="Withdraw" />
+                    <Button fx:id="depositButton" onAction="#handleDeposit" prefHeight="25.0" prefWidth="128.0" text="Deposit" />
+                    <Button fx:id="checkBalanceButton" onAction="#handleCheckBalance" prefHeight="25.0" prefWidth="126.0" text="Check Balance" />
+                </HBox>
+                <Button fx:id="okButton" onAction="#handleOk" prefHeight="25.0" prefWidth="120.0" text="OK" />
+                <Label fx:id="messageLabel" style="-fx-background-color: black;" textFill="#f5f5f5"  />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
